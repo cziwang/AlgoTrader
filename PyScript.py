@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 # Specify paper trading environment
 os.environ["APCA_API_BASE_URL"] = "https://paper-api.alpaca.markets"
 # Insert API credentials
-api = tradeapi.REST('PKK4H3QTLFRHA9RMH1KM', 'JYBQUDKXyoWR34D7ZMKBt1wLwTZGpRTuTn74ea4h', api_version='v2')
+api = tradeapi.REST('<PRIVATE KEY ID>', '<PRIVATE SECRET KEY ID>', api_version='v2')
 account = api.get_account()
 
 
@@ -84,7 +84,7 @@ def pairs_trading_algo():
 
 """
 This function sets up automailing feature
-Will send email to RECEIVER ADDRESS when trade
+Will send email with MAIL_CONTENT to RECEIVER_ADDRESS when trade
 is made.
 """
 def autoMail(mail_content):
